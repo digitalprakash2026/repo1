@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Book a luxury bridal makeup artist for radiant, camera-ready wedding beauty. Explore packages, portfolio, offers, testimonials, and CTA booking options." />
+  <title>Rosé Veil Bridal Artistry | Luxury Bridal Makeup</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ivory: #fffaf6;
+      --champagne: #f8e7d7;
+      --rose: #d97989;
+      --deep-rose: #a94458;
+      --plum: #3f2430;
+      --ink: #251820;
+      --muted: #7b626a;
+      --gold: #c7984a;
+      --white: #ffffff;
+      --shadow: 0 24px 70px rgba(63, 36, 48, 0.16);
+      --radius: 28px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background: linear-gradient(180deg, var(--ivory) 0%, #fff 42%, #fff4f1 100%);
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background:
+        radial-gradient(circle at 8% 14%, rgba(217, 121, 137, 0.18), transparent 30%),
+        radial-gradient(circle at 93% 5%, rgba(199, 152, 74, 0.18), transparent 28%),
+        radial-gradient(circle at 78% 82%, rgba(169, 68, 88, 0.12), transparent 26%);
+      z-index: -1;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+
+    .container {
+      width: min(1180px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .announcement {
+      background: linear-gradient(90deg, var(--plum), var(--deep-rose));
+      color: var(--white);
+      text-align: center;
+      padding: 12px 18px;
+      font-size: 14px;
+      letter-spacing: 0.02em;
+    }
+
+    .announcement strong { color: #ffe3b0; }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(18px);
+      background: rgba(255, 250, 246, 0.86);
+      border-bottom: 1px solid rgba(169, 68, 88, 0.12);
+    }
+
+    nav {
+      height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 22px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      font-size: 20px;
+    }
+
+    .brand-mark {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      color: var(--white);
+      background: linear-gradient(135deg, var(--rose), var(--gold));
+      box-shadow: 0 12px 30px rgba(217, 121, 137, 0.35);
+      font-family: "Cormorant Garamond", serif;
+      font-size: 26px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 26px;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--muted);
+    }
+
+    .nav-links a:hover { color: var(--deep-rose); }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 52px;
+      padding: 0 24px;
+      border-radius: 999px;
+      font-weight: 800;
+      border: 0;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .btn:hover { transform: translateY(-2px); }
+
+    .btn-primary {
+      color: var(--white);
+      background: linear-gradient(135deg, var(--deep-rose), var(--rose));
+      box-shadow: 0 18px 42px rgba(169, 68, 88, 0.32);
+    }
+
+    .btn-secondary {
+      color: var(--deep-rose);
+      background: var(--white);
+      border: 1px solid rgba(169, 68, 88, 0.18);
+      box-shadow: 0 12px 30px rgba(63, 36, 48, 0.08);
+    }
+
+    .hero {
+      position: relative;
+      padding: 84px 0 72px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.03fr) minmax(360px, 0.97fr);
+      gap: 56px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+      padding: 9px 14px;
+      border-radius: 999px;
+      color: var(--deep-rose);
+      background: rgba(217, 121, 137, 0.12);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "✦";
+      color: var(--gold);
+    }
+
+    h1, h2, h3 {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      margin: 0;
+      color: var(--plum);
+      line-height: 0.98;
+      letter-spacing: -0.045em;
+    }
+
+    h1 {
+      max-width: 740px;
+      font-size: clamp(52px, 8vw, 92px);
+    }
+
+    .hero p {
+      max-width: 620px;
+      margin: 24px 0 0;
+      color: var(--muted);
+      font-size: 19px;
+      line-height: 1.72;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 34px;
+    }
+
+    .trust-row {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 42px;
+      max-width: 670px;
+    }
+
+    .trust-card {
+      padding: 18px;
+      border-radius: 22px;
+      background: rgba(255, 255, 255, 0.78);
+      border: 1px solid rgba(169, 68, 88, 0.11);
+      box-shadow: 0 10px 32px rgba(63, 36, 48, 0.07);
+    }
+
+    .trust-card strong {
+      display: block;
+      color: var(--deep-rose);
+      font-size: 24px;
+      margin-bottom: 4px;
+    }
+
+    .trust-card span {
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .hero-visual {
+      position: relative;
+      min-height: 660px;
+    }
+
+    .portrait-card {
+      position: absolute;
+      overflow: hidden;
+      border-radius: 38px;
+      box-shadow: var(--shadow);
+      border: 10px solid rgba(255, 255, 255, 0.88);
+      background: var(--champagne);
+    }
+
+    .portrait-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: saturate(1.04) contrast(1.02);
+    }
+
+    .portrait-main {
+      top: 0;
+      right: 0;
+      width: 76%;
+      height: 570px;
+    }
+
+    .portrait-small {
+      left: 0;
+      bottom: 20px;
+      width: 45%;
+      height: 310px;
+    }
+
+    .booking-badge {
+      position: absolute;
+      right: 24px;
+      bottom: 44px;
+      width: 245px;
+      padding: 22px;
+      border-radius: 26px;
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid rgba(169, 68, 88, 0.13);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(12px);
+    }
+
+    .booking-badge strong {
+      display: block;
+      font-size: 34px;
+      color: var(--deep-rose);
+      letter-spacing: -0.05em;
+    }
+
+    .booking-badge span {
+      display: block;
+      margin-top: 5px;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 1.45;
+    }
+
+    section { padding: 86px 0; }
+
+    .section-heading {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 28px;
+      margin-bottom: 42px;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(40px, 5vw, 66px);
+      max-width: 720px;
+    }
+
+    .section-heading p {
+      max-width: 430px;
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .offer-strip {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 24px;
+      align-items: center;
+      padding: 34px;
+      border-radius: var(--radius);
+      color: var(--white);
+      background:
+        linear-gradient(135deg, rgba(63, 36, 48, 0.95), rgba(169, 68, 88, 0.92)),
+        url("https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=1400&q=80") center/cover;
+      box-shadow: var(--shadow);
+    }
+
+    .offer-strip h2 { color: var(--white); font-size: clamp(38px, 5vw, 58px); }
+    .offer-strip p { color: rgba(255, 255, 255, 0.82); line-height: 1.7; margin: 14px 0 0; }
+    .offer-strip .btn { justify-self: end; }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .feature-card, .package-card, .testimonial-card, .process-card {
+      background: rgba(255, 255, 255, 0.78);
+      border: 1px solid rgba(169, 68, 88, 0.12);
+      box-shadow: 0 14px 40px rgba(63, 36, 48, 0.08);
+    }
+
+    .feature-card {
+      padding: 26px;
+      border-radius: 26px;
+    }
+
+    .icon {
+      width: 50px;
+      height: 50px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 22px;
+      border-radius: 18px;
+      color: var(--white);
+      background: linear-gradient(135deg, var(--rose), var(--gold));
+      box-shadow: 0 14px 26px rgba(217, 121, 137, 0.26);
+      font-size: 22px;
+    }
+
+    .feature-card h3, .package-card h3, .process-card h3 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    .feature-card p, .package-card p, .process-card p, .testimonial-card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.68;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr 1fr;
+      grid-auto-rows: 245px;
+      gap: 18px;
+    }
+
+    .gallery figure {
+      position: relative;
+      margin: 0;
+      overflow: hidden;
+      border-radius: 28px;
+      box-shadow: 0 18px 48px rgba(63, 36, 48, 0.13);
+    }
+
+    .gallery figure:first-child { grid-row: span 2; }
+    .gallery figure:nth-child(4) { grid-column: span 2; }
+
+    .gallery img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.45s ease;
+    }
+
+    .gallery figure:hover img { transform: scale(1.06); }
+
+    .gallery figcaption {
+      position: absolute;
+      left: 18px;
+      right: 18px;
+      bottom: 18px;
+      padding: 12px 14px;
+      border-radius: 18px;
+      color: var(--white);
+      background: rgba(63, 36, 48, 0.62);
+      backdrop-filter: blur(10px);
+      font-weight: 800;
+    }
+
+    .packages {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .package-card {
+      position: relative;
+      padding: 30px;
+      border-radius: 30px;
+    }
+
+    .package-card.featured {
+      color: var(--white);
+      background: linear-gradient(155deg, var(--plum), var(--deep-rose));
+      transform: translateY(-12px);
+    }
+
+    .package-card.featured h3, .package-card.featured .price { color: var(--white); }
+    .package-card.featured p, .package-card.featured li { color: rgba(255, 255, 255, 0.8); }
+
+    .tag {
+      display: inline-flex;
+      margin-bottom: 18px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      color: var(--deep-rose);
+      background: rgba(217, 121, 137, 0.13);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .featured .tag { color: #ffe3b0; background: rgba(255, 255, 255, 0.13); }
+
+    .price {
+      margin: 20px 0 16px;
+      color: var(--deep-rose);
+      font-size: 42px;
+      font-weight: 900;
+      letter-spacing: -0.06em;
+    }
+
+    .price small { font-size: 15px; color: inherit; opacity: 0.65; }
+
+    ul {
+      list-style: none;
+      margin: 22px 0 28px;
+      padding: 0;
+    }
+
+    li {
+      display: flex;
+      gap: 10px;
+      margin: 12px 0;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+
+    li::before {
+      content: "✓";
+      color: var(--gold);
+      font-weight: 900;
+      flex: 0 0 auto;
+    }
+
+    .process-grid, .testimonials {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .process-card {
+      padding: 28px;
+      border-radius: 28px;
+    }
+
+    .step {
+      display: inline-grid;
+      place-items: center;
+      width: 44px;
+      height: 44px;
+      margin-bottom: 18px;
+      border-radius: 50%;
+      color: var(--white);
+      background: var(--deep-rose);
+      font-weight: 900;
+    }
+
+    .testimonial-card {
+      padding: 28px;
+      border-radius: 28px;
+    }
+
+    .stars {
+      color: var(--gold);
+      letter-spacing: 2px;
+      margin-bottom: 18px;
+    }
+
+    .client {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 22px;
+      font-weight: 900;
+    }
+
+    .client img {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .faq-grid {
+      display: grid;
+      grid-template-columns: 0.72fr 1.28fr;
+      gap: 36px;
+      align-items: start;
+    }
+
+    details {
+      padding: 24px;
+      border-radius: 22px;
+      margin-bottom: 14px;
+      background: rgba(255, 255, 255, 0.8);
+      border: 1px solid rgba(169, 68, 88, 0.12);
+      box-shadow: 0 10px 28px rgba(63, 36, 48, 0.06);
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: 900;
+      color: var(--plum);
+    }
+
+    details p {
+      margin: 14px 0 0;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .final-cta {
+      text-align: center;
+      padding: 76px 28px;
+      border-radius: 40px;
+      color: var(--white);
+      background:
+        linear-gradient(135deg, rgba(63, 36, 48, 0.9), rgba(169, 68, 88, 0.88)),
+        url("https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1600&q=80") center/cover;
+      box-shadow: var(--shadow);
+    }
+
+    .final-cta h2 {
+      color: var(--white);
+      margin: 0 auto;
+      max-width: 800px;
+      font-size: clamp(42px, 6vw, 76px);
+    }
+
+    .final-cta p {
+      margin: 22px auto 30px;
+      max-width: 640px;
+      color: rgba(255, 255, 255, 0.84);
+      line-height: 1.75;
+      font-size: 18px;
+    }
+
+    footer {
+      padding: 42px 0;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    .floating-cta {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      z-index: 12;
+    }
+
+    @media (max-width: 960px) {
+      .nav-links { display: none; }
+      .hero-grid, .offer-strip, .faq-grid { grid-template-columns: 1fr; }
+      .hero-visual { min-height: 560px; }
+      .portrait-main { width: 82%; height: 480px; }
+      .features-grid, .packages, .process-grid, .testimonials { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .gallery { grid-template-columns: 1fr 1fr; }
+      .offer-strip .btn { justify-self: start; }
+    }
+
+    @media (max-width: 680px) {
+      .container { width: min(100% - 28px, 1180px); }
+      nav { height: 68px; }
+      .brand span:last-child { display: none; }
+      .hero { padding-top: 52px; }
+      .hero-grid { gap: 34px; }
+      .hero-visual { min-height: 500px; }
+      .portrait-main { width: 90%; height: 390px; }
+      .portrait-small { width: 56%; height: 230px; }
+      .booking-badge { right: 0; bottom: 4px; width: 215px; }
+      .trust-row, .features-grid, .packages, .process-grid, .testimonials, .gallery { grid-template-columns: 1fr; }
+      .gallery { grid-auto-rows: 280px; }
+      .gallery figure:first-child, .gallery figure:nth-child(4) { grid-row: auto; grid-column: auto; }
+      .section-heading { display: block; }
+      .section-heading p { margin-top: 14px; }
+      .package-card.featured { transform: none; }
+      .floating-cta { left: 16px; right: 16px; bottom: 16px; }
+      .floating-cta .btn { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <div class="announcement">Limited 2026 dates available: <strong>Book your bridal trial this month and receive complimentary lashes + touch-up kit.</strong></div>
+
+  <header>
+    <nav class="container" aria-label="Primary navigation">
+      <a class="brand" href="#top" aria-label="Rosé Veil Bridal Artistry home">
+        <span class="brand-mark">R</span>
+        <span>Rosé Veil Bridal Artistry</span>
+      </a>
+      <div class="nav-links">
+        <a href="#portfolio">Portfolio</a>
+        <a href="#packages">Packages</a>
+        <a href="#process">Process</a>
+        <a href="#reviews">Reviews</a>
+      </div>
+      <a class="btn btn-primary" href="mailto:hello@roseveilbridal.com?subject=Bridal%20Makeup%20Booking%20Inquiry">Check Availability</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Luxury bridal makeup artist</span>
+          <h1>Look breathtaking in person, flawless on camera, and completely yourself.</h1>
+          <p>Soft-glam, timeless bridal beauty designed to last through happy tears, champagne toasts, flash photography, and the final dance — without feeling heavy or overdone.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="mailto:hello@roseveilbridal.com?subject=Reserve%20My%20Wedding%20Date">Reserve My Date</a>
+            <a class="btn btn-secondary" href="#packages">View Bridal Packages</a>
+          </div>
+          <div class="trust-row" aria-label="Business highlights">
+            <div class="trust-card"><strong>350+</strong><span>radiant brides served</span></div>
+            <div class="trust-card"><strong>12 hr</strong><span>photo-ready wear promise</span></div>
+            <div class="trust-card"><strong>4.9★</strong><span>average bride rating</span></div>
+          </div>
+        </div>
+        <div class="hero-visual" aria-label="Bridal makeup portfolio preview">
+          <div class="portrait-card portrait-main">
+            <img src="https://images.unsplash.com/photo-1512316609839-ce289d3eba0a?auto=format&fit=crop&w=900&q=85" alt="Bride with elegant glowing bridal makeup and veil" />
+          </div>
+          <div class="portrait-card portrait-small">
+            <img src="https://images.unsplash.com/photo-1487412912498-0447578fcca8?auto=format&fit=crop&w=700&q=85" alt="Close-up of luxury makeup brushes and bridal beauty products" />
+          </div>
+          <div class="booking-badge">
+            <strong>20%</strong>
+            <span>off bridal party glam when you book 5+ faces with your wedding package.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container" aria-label="Limited bridal offer">
+      <div class="offer-strip">
+        <div>
+          <h2>Your dream look starts with a stress-free beauty plan.</h2>
+          <p>Secure your wedding date with a dedicated artist, personalized skin prep guide, timeline coordination, and a luxury trial focused on exactly how you want to feel.</p>
+        </div>
+        <a class="btn btn-secondary" href="tel:+15550148200">Call For A Free Consultation</a>
+      </div>
+    </section>
+
+    <section class="container" id="usp">
+      <div class="section-heading">
+        <h2>Why brides choose Rosé Veil for the most photographed day of their lives.</h2>
+        <p>Every touchpoint is built to remove uncertainty, enhance your natural features, and keep the morning calm, polished, and on schedule.</p>
+      </div>
+      <div class="features-grid">
+        <article class="feature-card">
+          <div class="icon">💧</div>
+          <h3>Waterproof wear</h3>
+          <p>Professional long-wear formulas and sealing techniques made for tears, heat, hugs, and hours of celebration.</p>
+        </article>
+        <article class="feature-card">
+          <div class="icon">📸</div>
+          <h3>Camera-ready finish</h3>
+          <p>Balanced complexion work that looks luminous in natural light and polished under flash photography.</p>
+        </article>
+        <article class="feature-card">
+          <div class="icon">🕊️</div>
+          <h3>Calm timeline</h3>
+          <p>Your prep schedule is mapped in advance so everyone feels pampered — never rushed — before the aisle.</p>
+        </article>
+        <article class="feature-card">
+          <div class="icon">✨</div>
+          <h3>Signature soft glam</h3>
+          <p>Modern bridal looks that enhance your features with radiant skin, sculpted eyes, and custom lip pairings.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="container" id="portfolio">
+      <div class="section-heading">
+        <h2>Recent bridal beauty inspiration.</h2>
+        <p>From romantic garden ceremonies to black-tie receptions, each look is tailored to your dress, palette, venue, and personality.</p>
+      </div>
+      <div class="gallery">
+        <figure>
+          <img src="https://images.unsplash.com/photo-1523438885200-e635ba2c371e?auto=format&fit=crop&w=900&q=85" alt="Elegant bride with classic veil and soft makeup" />
+          <figcaption>Timeless veil glow</figcaption>
+        </figure>
+        <figure>
+          <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=700&q=85" alt="Soft glam bridal portrait with glowing skin" />
+          <figcaption>Soft glam radiance</figcaption>
+        </figure>
+        <figure>
+          <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=700&q=85" alt="Editorial bridal beauty with romantic styling" />
+          <figcaption>Editorial romance</figcaption>
+        </figure>
+        <figure>
+          <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1000&q=85" alt="Bridal hairstyling and makeup preparation" />
+          <figcaption>Luxury morning prep</figcaption>
+        </figure>
+        <figure>
+          <img src="https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?auto=format&fit=crop&w=700&q=85" alt="Makeup artist applying bridal makeup" />
+          <figcaption>Artist-led detail</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="container" id="packages">
+      <div class="section-heading">
+        <h2>Bridal packages designed to convert your vision into a flawless plan.</h2>
+        <p>Transparent, high-value options for elopements, full wedding mornings, and bridal party beauty.</p>
+      </div>
+      <div class="packages">
+        <article class="package-card">
+          <span class="tag">Elopement</span>
+          <h3>Just Us Glow</h3>
+          <p>Perfect for intimate vows, courthouse weddings, and destination send-offs.</p>
+          <div class="price">$325 <small>from</small></div>
+          <ul>
+            <li>Bridal makeup application</li>
+            <li>Luxury skin prep and lashes</li>
+            <li>Mini touch-up kit</li>
+            <li>Optional hair partner referral</li>
+          </ul>
+          <a class="btn btn-secondary" href="mailto:hello@roseveilbridal.com?subject=Just%20Us%20Glow%20Package">Ask About This Package</a>
+        </article>
+        <article class="package-card featured">
+          <span class="tag">Most booked</span>
+          <h3>Signature Bride</h3>
+          <p>The complete bridal experience for a confident, cohesive look from trial to reception.</p>
+          <div class="price">$695 <small>from</small></div>
+          <ul>
+            <li>In-depth bridal preview trial</li>
+            <li>Wedding-day makeup and lashes</li>
+            <li>Custom skin prep plan</li>
+            <li>90-minute on-location touch-up window</li>
+          </ul>
+          <a class="btn btn-secondary" href="mailto:hello@roseveilbridal.com?subject=Signature%20Bride%20Package">Reserve Signature Bride</a>
+        </article>
+        <article class="package-card">
+          <span class="tag">Best value</span>
+          <h3>Bridal Party Luxe</h3>
+          <p>Elevated beauty for mothers, bridesmaids, and VIP guests with a coordinated schedule.</p>
+          <div class="price">$115 <small>/ face</small></div>
+          <ul>
+            <li>Soft-glam makeup for party members</li>
+            <li>Complimentary lashes for 5+ faces</li>
+            <li>Assistant artist available</li>
+            <li>Group timeline management</li>
+          </ul>
+          <a class="btn btn-secondary" href="mailto:hello@roseveilbridal.com?subject=Bridal%20Party%20Luxe%20Quote">Build My Quote</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="container" id="process">
+      <div class="section-heading">
+        <h2>A simple, reassuring booking process.</h2>
+        <p>No guesswork, no endless back-and-forth — just clear next steps and a beauty experience that feels effortless.</p>
+      </div>
+      <div class="process-grid">
+        <article class="process-card">
+          <span class="step">1</span>
+          <h3>Inquiry & date check</h3>
+          <p>Share your wedding date, location, party size, and inspiration. You will receive availability and a tailored recommendation.</p>
+        </article>
+        <article class="process-card">
+          <span class="step">2</span>
+          <h3>Preview your look</h3>
+          <p>We refine complexion, eye shape, lip tone, and wear preferences during a luxury trial with notes and photos.</p>
+        </article>
+        <article class="process-card">
+          <span class="step">3</span>
+          <h3>Glow on wedding day</h3>
+          <p>Arrive, relax, and enjoy a polished schedule, premium products, and a final touch-up before photos begin.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="container" id="reviews">
+      <div class="section-heading">
+        <h2>What brides say after the final reveal.</h2>
+        <p>Real social proof that speaks to the calm energy, elevated artistry, and confidence brides remember.</p>
+      </div>
+      <div class="testimonials">
+        <article class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p>“My makeup lasted through 95-degree portraits and the dance floor. I looked like myself, only more polished and glowing.”</p>
+          <div class="client"><img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=160&q=80" alt="Portrait of bride Sophia" /> Sophia M.</div>
+        </article>
+        <article class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p>“The morning felt calm because the timeline was so organized. Every bridesmaid loved her look and our photos are stunning.”</p>
+          <div class="client"><img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=160&q=80" alt="Portrait of bride Maya" /> Maya R.</div>
+        </article>
+        <article class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p>“The trial was incredibly detailed. On the wedding day, I had zero stress because we already knew the exact look.”</p>
+          <div class="client"><img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=160&q=80" alt="Portrait of bride Elena" /> Elena T.</div>
+        </article>
+      </div>
+    </section>
+
+    <section class="container" id="faq">
+      <div class="faq-grid">
+        <div>
+          <span class="eyebrow">Questions brides ask</span>
+          <h2>Everything you need before you book.</h2>
+        </div>
+        <div>
+          <details open>
+            <summary>How far in advance should I book?</summary>
+            <p>Peak spring, summer, and fall Saturdays often book 9–14 months ahead. If your date is sooner, inquire anyway — occasional dates reopen.</p>
+          </details>
+          <details>
+            <summary>Do you travel on location?</summary>
+            <p>Yes. On-location wedding morning service is available, with travel quoted based on getting-ready location, parking, and start time.</p>
+          </details>
+          <details>
+            <summary>Can you work with sensitive skin?</summary>
+            <p>Absolutely. Your preview includes skin notes, product preferences, and a prep plan so your wedding-day look feels comfortable and fresh.</p>
+          </details>
+          <details>
+            <summary>What is required to reserve my date?</summary>
+            <p>A signed agreement and retainer secures the calendar. Remaining balances and final timelines are confirmed before the wedding day.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="final-cta">
+        <span class="eyebrow">Ready for your bridal glow?</span>
+        <h2>Let’s create the look you cannot stop smiling at in every photo.</h2>
+        <p>Tell us your wedding date and vision today. If your date is available, you will receive package guidance, next steps, and a complimentary consultation invitation.</p>
+        <div class="hero-actions" style="justify-content:center; margin-top:0;">
+          <a class="btn btn-secondary" href="mailto:hello@roseveilbridal.com?subject=Check%20My%20Wedding%20Date">Check My Wedding Date</a>
+          <a class="btn btn-primary" href="tel:+15550148200">Call +1 (555) 014-8200</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="floating-cta">
+    <a class="btn btn-primary" href="mailto:hello@roseveilbridal.com?subject=Fast%20Bridal%20Makeup%20Quote">Get A Fast Quote</a>
+  </div>
+
+  <footer>
+    <div class="container">© 2026 Rosé Veil Bridal Artistry · Luxury bridal makeup for modern romantics · hello@roseveilbridal.com</div>
+  </footer>
+</body>
+</html>
